@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>user</title>
+        <link rel="stylesheet" href="/css/marks.css">
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>S.No</th>
+                <th>Country Name</th>
+                <th>High</th>
+                <th>Low</th>
+            </tr>
+            <% if(userdata.length !=0){%>
+                <%var i=1;%>
+                <%userdata.forEach(function(data){%>
+            <tr>
+                <td><%=i;%></td>
+                <td><%=data.country%></td>
+                <td><%=data.high %></td>
+                <td><%=data.low %></td>
+            </tr>
+            <%i++;})%>
+            <%}else{%>
+                <tr>
+                    <td colspan="8">No Data Found</td>
+                </tr>
+                <%}%>
+        </table>
+    </body>
+</html>
